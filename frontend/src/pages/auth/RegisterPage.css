@@ -1,0 +1,10 @@
+@import './LoginPage.css';
+
+.auth-card--wide {
+  max-width: 480px;
+}
+
+.auth-select {
+  cursor: pointer;
+  appearance: auto;
+}
