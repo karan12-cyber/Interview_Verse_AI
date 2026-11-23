@@ -1,0 +1,84 @@
+.cta {
+  background-color: var(--color-bg-white);
+}
+
+.cta__card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--space-16) var(--space-8);
+  text-align: center;
+}
+
+.cta__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.cta__title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: #FFFFFF;
+  line-height: var(--leading-tight);
+  max-width: 540px;
+}
+
+.cta__description {
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 480px;
+  line-height: var(--leading-relaxed);
+}
+
+.cta__card .btn--primary {
+  background-color: #FFFFFF;
+  color: var(--color-primary);
+  border-color: #FFFFFF;
+}
+
+.cta__card .btn--primary:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtle decorative circles */
+.cta__decor {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.cta__decor--1 {
+  width: 400px;
+  height: 400px;
+  top: -120px;
+  right: -80px;
+}
+
+.cta__decor--2 {
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  left: -60px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta__card {
+    padding: var(--space-10) var(--space-6);
+  }
+
+  .cta__title {
+    font-size: var(--text-2xl);
+  }
+
+  .cta__description {
+    font-size: var(--text-base);
+  }
+}
