@@ -1,0 +1,312 @@
+/* ==============================================================
+   InterviewVerse AI — Student Dashboard Styles
+   ============================================================== */
+
+.dash-container {
+  min-height: 100vh;
+  background-color: var(--color-bg, #f8fafc);
+  display: flex;
+  flex-direction: column;
+}
+
+.dash-nav {
+  height: 72px;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.dash-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dash-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.dash-logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #192957;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 8px;
+}
+
+.dash-logo-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #192957;
+}
+
+.dash-user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.dash-user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.dash-user-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.dash-user-role {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.dash-logout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.dash-logout-btn:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+
+.dash-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.dash-welcome-card {
+  background: linear-gradient(135deg, #192957 0%, #1e3a8a 100%);
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 25px -5px rgba(25, 41, 87, 0.15);
+}
+
+.dash-pill {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: #bfdbfe;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dash-welcome-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.dash-welcome-subtitle {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin: 0;
+  max-width: 600px;
+}
+
+.dash-home-btn {
+  background: #ffffff;
+  color: #192957;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.dash-home-btn:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+}
+
+.dash-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.dash-stat-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.dash-stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dash-stat-icon--blue {
+  background: rgba(56, 124, 246, 0.12);
+  color: #387cf6;
+}
+
+.dash-stat-icon--green {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+}
+
+.dash-stat-icon--purple {
+  background: rgba(168, 85, 247, 0.12);
+  color: #a855f7;
+}
+
+.dash-stat-val {
+  display: block;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.dash-stat-lbl {
+  display: block;
+  font-size: 0.825rem;
+  color: #64748b;
+}
+
+.dash-section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #192957;
+  margin: 0 0 1.25rem 0;
+}
+
+.dash-modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.dash-module-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.dash-mod-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.dash-mod-icon--blue {
+  background: rgba(56, 124, 246, 0.12);
+  color: #387cf6;
+}
+
+.dash-mod-icon--purple {
+  background: rgba(168, 85, 247, 0.12);
+  color: #a855f7;
+}
+
+.dash-mod-icon--green {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+}
+
+.dash-mod-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+}
+
+.dash-mod-desc {
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.55;
+  margin: 0 0 1.5rem 0;
+  flex: 1;
+}
+
+.dash-mod-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.dash-mod-action-btn:hover {
+  background: #387cf6;
+  border-color: #387cf6;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .dash-welcome-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+}

@@ -1,10 +1,621 @@
-@import './LoginPage.css';
+/* ==============================================================
+   InterviewVerse AI — Premium Two-Column Registration Page Styles
+   Brand Identity: Primary Blue (#387CF6), Navy (#192957), Off-white (#F8FAFC)
+   ============================================================== */
 
-.auth-card--wide {
-  max-width: 480px;
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg, #f8fafc);
+  padding: var(--space-8, 2rem) var(--space-4, 1rem);
+  box-sizing: border-box;
 }
 
-.auth-select {
+.register-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  min-height: 720px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background-color: var(--color-bg-white, #ffffff);
+  border-radius: var(--radius-xl, 16px);
+  border: 1px solid var(--color-border, #e2e8f0);
+  box-shadow: 0 20px 35px -5px rgba(25, 41, 87, 0.08), 0 10px 15px -5px rgba(25, 41, 87, 0.04);
+  overflow: hidden;
+}
+
+/* ==============================================================
+   LEFT SECTION: Branding, Intro & Candidate Highlights
+   ============================================================== */
+
+.register-brand-panel {
+  background: linear-gradient(145deg, #192957 0%, #101c40 100%);
+  color: #ffffff;
+  padding: var(--space-10, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-brand-panel::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(56, 124, 246, 0.28) 0%, rgba(56, 124, 246, 0) 70%);
+  pointer-events: none;
+}
+
+.register-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3, 0.75rem);
+  text-decoration: none;
+  width: fit-content;
+  z-index: 2;
+}
+
+.register-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, #387cf6 0%, #2563eb 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(56, 124, 246, 0.35);
+}
+
+.register-brand-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.register-intro-content {
+  margin: var(--space-6, 1.5rem) 0 var(--space-4, 1rem);
+  z-index: 2;
+}
+
+.register-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(56, 124, 246, 0.15);
+  border: 1px solid rgba(56, 124, 246, 0.35);
+  color: #93c5fd;
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: var(--space-3, 0.75rem);
+}
+
+.register-pill-icon {
+  color: #60a5fa;
+}
+
+.register-intro-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.03em;
+  line-height: 1.22;
+}
+
+.register-intro-tagline {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #93c5fd;
+  margin: 0 0 var(--space-2, 0.5rem) 0;
+}
+
+.register-intro-desc {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #cbd5e1;
+  max-width: 440px;
+  margin: 0;
+}
+
+/* Interview Preview Card */
+.register-preview-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg, 12px);
+  padding: 1.15rem;
+  margin: var(--space-4, 1rem) 0;
+  z-index: 2;
+}
+
+.register-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.register-role-badge {
+  background: rgba(56, 124, 246, 0.25);
+  color: #bfdbfe;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.register-preview-milestones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.milestone-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.milestone-bullet {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.milestone-item--active .milestone-bullet {
+  background: #387cf6;
+  color: #ffffff;
+}
+
+.milestone-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.milestone-title {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.milestone-sub {
+  font-size: 0.725rem;
+  color: #94a3b8;
+}
+
+/* Feature Highlights */
+.register-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  z-index: 2;
+}
+
+/* ==============================================================
+   RIGHT SECTION: Registration Form Card
+   ============================================================== */
+
+.register-form-panel {
+  padding: var(--space-8, 2rem) var(--space-8, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-bg-white, #ffffff);
+  overflow-y: auto;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.register-card-top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: var(--space-3, 0.75rem);
+}
+
+.register-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary, #64748b);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.register-back-button:hover {
+  color: #387cf6;
+}
+
+.register-card-header {
+  margin-bottom: var(--space-4, 1rem);
+}
+
+.register-card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #192957;
+  margin: 0 0 0.3rem 0;
+  letter-spacing: -0.02em;
+}
+
+.register-card-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary, #64748b);
+  margin: 0;
+}
+
+/* Alerts */
+.register-alert {
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.register-alert--error {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.register-alert--success {
+  background-color: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+/* Form */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.register-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  text-align: left;
+}
+
+.register-field-label {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.register-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--radius-md, 8px);
+  background-color: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.register-input-box:focus-within {
+  border-color: #387cf6;
+  box-shadow: 0 0 0 3px rgba(56, 124, 246, 0.14);
+}
+
+.register-input-box--error {
+  border-color: #ef4444 !important;
+}
+
+.register-input-box--error:focus-within {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.14) !important;
+}
+
+.register-field-icon {
+  position: absolute;
+  left: 0.85rem;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.register-input {
+  width: 100%;
+  height: 42px;
+  border: none;
+  background: transparent;
+  padding: 0 2.5rem 0 2.5rem;
+  font-size: 0.875rem;
+  color: #0f172a;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.register-input::placeholder {
+  color: #94a3b8;
+  font-size: 0.825rem;
+}
+
+.register-select {
   cursor: pointer;
   appearance: auto;
+  padding-right: 1rem;
+}
+
+.register-pwd-toggle {
+  position: absolute;
+  right: 0.75rem;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: color 0.15s ease;
+}
+
+.register-pwd-toggle:hover {
+  color: #475569;
+}
+
+.register-error-text {
+  font-size: 0.725rem;
+  color: #dc2626;
+  margin-top: 0.1rem;
+}
+
+/* Terms Checkbox */
+.register-checkbox-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.2rem;
+}
+
+.register-checkbox-label {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #475569;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.register-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  accent-color: #387cf6;
+  cursor: pointer;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+.register-inline-link {
+  color: #387cf6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-inline-link:hover {
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.register-submit-btn {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #387cf6 0%, #2563eb 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(56, 124, 246, 0.28);
+  transition: box-shadow 0.2s ease, opacity 0.2s ease;
+  margin-top: 0.35rem;
+}
+
+.register-submit-btn:hover:not(:disabled) {
+  box-shadow: 0 6px 16px rgba(56, 124, 246, 0.38);
+}
+
+.register-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.register-card-footer {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border, #e2e8f0);
+  text-align: center;
+}
+
+.register-footer-text {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary, #64748b);
+  margin: 0;
+}
+
+.register-footer-link {
+  color: #387cf6;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.register-footer-link:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* ==============================================================
+   OTP VERIFICATION PANEL STYLES
+   ============================================================== */
+
+.otp-verification-panel {
+  text-align: center;
+  padding: var(--space-4, 1rem) 0;
+}
+
+.otp-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #387cf6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4, 1rem);
+}
+
+.otp-recipient-email {
+  color: #192957;
+  font-weight: 600;
+}
+
+.otp-number-input {
+  letter-spacing: 0.6em;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: var(--font-mono, monospace);
+  padding: 0 1rem;
+}
+
+.otp-resend-row {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.otp-timer-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.825rem;
+  color: #64748b;
+}
+
+.otp-resend-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: none;
+  color: #387cf6;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.otp-resend-btn:hover:not(:disabled) {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.otp-back-row {
+  margin-top: 1rem;
+}
+
+.otp-back-link {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-size: 0.825rem;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.otp-back-link:hover {
+  color: #1e293b;
+}
+
+/* ==============================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ============================================================== */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .register-wrapper {
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    min-height: auto;
+  }
+
+  .register-brand-panel,
+  .register-form-panel {
+    padding: var(--space-6, 1.5rem);
+  }
+
+  .register-intro-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Mobile & Small Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .register-container {
+    padding: var(--space-3, 0.75rem);
+  }
+
+  .register-wrapper {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    border-radius: var(--radius-lg, 12px);
+  }
+
+  /* Hide left branding section on mobile to prioritize instant registration access */
+  .register-brand-panel {
+    display: none;
+  }
+
+  .register-form-panel {
+    padding: var(--space-6, 1.5rem) var(--space-4, 1rem);
+  }
+
+  .register-card {
+    max-width: 100%;
+  }
+
+  .register-card-title {
+    font-size: 1.45rem;
+  }
 }
